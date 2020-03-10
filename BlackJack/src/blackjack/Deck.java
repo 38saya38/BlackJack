@@ -16,4 +16,87 @@ public class Deck {
 		// 山札をシャッフル
 		Collections.shuffle(deck);
 	}
+
+	//現在の合計ポイントを計算するメソッド
+	public static int sumPoint(List<Integer> list) {
+		int sum = 0;
+
+		for (int i = 0; i < list.size(); i++) {
+			sum = sum + toPoint(toNumber(list.get(i)));
+		}
+		return sum;
+	}
+
+	//山札の数をカードの数に置き換えるメソッド
+	public static int toNumber(int cardNumber) {
+		int number = cardNumber % 13;
+		if (number == 0) {
+			number = 13;
+		}
+
+		return number;
+	}
+
+	//山札の通し番号を得点計算用のポイントに変換するメソッド J/Q/Kは10とする
+	public static int toPoint(int num) {
+			if (num == 11 || num == 12 || num == 13) {
+				num = 10;
+			}
+			return num;
+
+		}
+
+		//山札の数を（スート）の（ランク）の文字列に置き換えるメソッド
+		public static String toDescription(int cardNumber) {
+
+			String rank = toRank(toNumber(cardNumber));
+			String suit = toSuit(cardNumber);
+
+			return suit + "の" + rank;
+
+		}
+
+		//カード番号をランクに変換するメソッド（A,J,Q,Kなど）
+		public static String toRank(int number) {
+			switch (number) {
+			case 1:
+				return "A";
+
+			case 11:
+				return "J";
+
+			case 12:
+				return "Q";
+
+			case 13:
+				return "K";
+
+			default:
+				String str = String.valueOf(number);
+				return str;
+			}
+
+		}
+
+		//山札の数をスートに置き換えるメソッド
+		public static String toSuit(int cardNumber) {
+			switch ((cardNumber - 1) / 13) {
+			case 0:
+				return "クラブ";
+
+			case 1:
+				return "ダイヤ";
+
+			case 2:
+				return "ハート";
+
+			case 3:
+				return "スペード";
+
+			default:
+				return "例外です";
+			}
+		}
+
+
 }
