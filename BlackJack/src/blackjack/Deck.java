@@ -4,6 +4,8 @@ import java.util.Collections;
 import java.util.List;
 
 public class Deck {
+	
+	
 	// 山札（deck）に値を入れ、シャッフルするメソッド
 	public void shuffleDeck(List<Integer> deck) {
 		// リストに1-52の連番を代入

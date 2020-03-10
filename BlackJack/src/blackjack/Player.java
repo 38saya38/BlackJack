@@ -1,9 +1,7 @@
 package blackjack;
 
-import java.util.List;
-
 public class Player {
 
-	List<Integer> playerDeck; //プレイヤーの手札
+	int playerHands; //プレイヤーの手札枚数を記録する変数playerHandsを定義
 
 }
