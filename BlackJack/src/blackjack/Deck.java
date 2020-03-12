@@ -18,7 +18,6 @@ public class Deck {
 	//現在の合計ポイントを計算するメソッド
 	public static int sumPoint(List<Integer> list) {
 		int sum = 0;
-
 		for (int i = 0; i < list.size(); i++) {
 			sum = sum + toPoint(toNumber(list.get(i)));
 		}
