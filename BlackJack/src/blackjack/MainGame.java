@@ -31,10 +31,12 @@ public class MainGame {
 
 		deckInstance.shuffleDeck(deck); // インスタンス生成後，インスタンスフィールドを経由してメソッドを呼び出す
 
-//		// シャッフルしたカードを表示
+		// シャッフルしたカードを表示
 //		for(Integer i : deck) {
 //	            System.out.println(i);
 //	        }
+
+		Deck.toNumber(cardNumber);
 
 
 

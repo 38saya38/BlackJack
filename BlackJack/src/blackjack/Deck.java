@@ -96,4 +96,13 @@ public class Deck {
 		}
 	}
 
+	//手札がバーストしているか判定するメソッド
+	public static boolean isBusted(int point) {
+		if (point <= 21) {
+			return false;
+		} else {
+			return true;
+		}
+	}
+
 }
