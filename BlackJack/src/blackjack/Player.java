@@ -1,7 +1,10 @@
 package blackjack;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Player {
 
-	int playerHands; //プレイヤーの手札枚数を記録する変数playerHandsを定義
+	List<Integer> player = new ArrayList<>(); //プレイヤーの手札リストを作成
 
 }

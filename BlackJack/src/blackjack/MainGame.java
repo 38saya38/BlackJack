@@ -36,7 +36,6 @@ public class MainGame {
 //	            System.out.println(i);
 //	        }
 
-		Deck.toNumber(cardNumber);
 
 
 
