@@ -52,9 +52,14 @@ public class MainGame {
 				+ Deck.toDescription(dealer.get(0)));
 		System.out.println("貴方の2枚目のカードは"
 				+ Deck.toDescription(player.get(1)));
-		System.out.println("ディーラーの2枚めのカードは秘密です。");
+		System.out.println("ディーラーの2枚めのカードは秘密だよ");
 
+		//プレイヤー、ディーラーのポイントを集計
+		int playerPoint = Deck.sumPoint(player);
+		int dealerPoint = Deck.sumPoint(dealer);
 
+		System.out.println("あなたの現在のポイントは"
+				+ playerPoint + "です");
 
 	}
 
