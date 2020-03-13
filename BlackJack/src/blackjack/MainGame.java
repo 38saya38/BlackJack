@@ -35,9 +35,10 @@ public class MainGame {
 		//		for(Integer i : deck) {
 		//	            System.out.println(i);
 		//	        }
-		
+
 		List<Integer> player = new ArrayList<>(); //プレイヤーの手札リストを作成
-		
+		List<Integer> dealer = new ArrayList<>(); //ディーラーの手札リストを作成
+
 		Deck.sumPoint(deck);
 
 	}
