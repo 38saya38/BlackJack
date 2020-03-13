@@ -45,6 +45,7 @@ public class MainGame {
 		player.add(deck.get(2));
 		dealer.add(deck.get(3));
 
+
 		Deck.sumPoint(deck);
 
 	}
