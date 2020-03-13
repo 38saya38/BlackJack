@@ -31,13 +31,19 @@ public class MainGame {
 
 		deckInstance.shuffleDeck(deck); // インスタンス生成後，インスタンスフィールドを経由してメソッドを呼び出す
 
-		// シャッフルしたカードを表示
+		// シャッフルしたカードを表示。デバック用
 		//		for(Integer i : deck) {
 		//	            System.out.println(i);
 		//	        }
 
 		List<Integer> player = new ArrayList<>(); //プレイヤーの手札リストを作成
 		List<Integer> dealer = new ArrayList<>(); //ディーラーの手札リストを作成
+
+		//プレイヤー・ディーラーがカードを2枚引く
+		player.add(deck.get(0));
+		dealer.add(deck.get(1));
+		player.add(deck.get(2));
+		dealer.add(deck.get(3));
 
 		Deck.sumPoint(deck);
 
