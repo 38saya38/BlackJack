@@ -24,7 +24,7 @@ import java.util.List;
 public class MainGame {
 
 	public static void main(String[] args) {
-		System.out.println("ブラックジャックへようこそ");
+		System.out.println("ブラックジャックへようこそ！");
 
 		List<Integer> deck = new ArrayList<Integer>();
 		Deck deckInstance = new Deck(); //Deckクラスのインスタンスを生成

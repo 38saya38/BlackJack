@@ -28,7 +28,7 @@ public class Deck {
 	}
 
 	//山札の数をカードの数に置き換えるメソッド
-	public static int toNumber(int cardNumber) {
+	private static int toNumber(int cardNumber) {
 		int number = cardNumber % 13;
 		if (number == 0) {
 			number = 13;
@@ -57,7 +57,7 @@ public class Deck {
 	}
 
 	//カード番号をランクに変換するメソッド（A,J,Q,Kなど）
-	public static String toRank(int number) {
+	private static String toRank(int number) {
 		switch (number) {
 		case 1:
 			return "A";
@@ -79,7 +79,7 @@ public class Deck {
 	}
 
 	//山札の数をスートに置き換えるメソッド
-	public static String toSuit(int cardNumber) {
+	private static String toSuit(int cardNumber) {
 		switch ((cardNumber - 1) / 13) {
 		case 0:
 			return "クラブ";
