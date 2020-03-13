@@ -54,7 +54,7 @@ public class MainGame {
 				+ Deck.toDescription(player.get(1)));
 		System.out.println("ディーラーの2枚めのカードは秘密です。");
 
-		Deck.sumPoint(deck);
+
 
 	}
 
