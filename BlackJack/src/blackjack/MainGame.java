@@ -26,7 +26,7 @@ public class MainGame {
 	public static void main(String[] args) {
 		System.out.println("ブラックジャックへようこそ！");
 
-		List<Integer> deck = new ArrayList<Integer>();
+		List<Integer> deck = new ArrayList<Integer>(52);
 		Deck deckInstance = new Deck(); //Deckクラスのインスタンスを生成
 
 		deckInstance.shuffleDeck(deck); // インスタンス生成後，インスタンスフィールドを経由してメソッドを呼び出す
