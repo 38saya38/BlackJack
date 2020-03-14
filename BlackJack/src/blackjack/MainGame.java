@@ -29,7 +29,7 @@ public class MainGame {
 
 		List<Integer> deck = new ArrayList<Integer>(52);
 
-		Deck.shuffleDeck(deck); // インスタンス生成後，インスタンスフィールドを経由してメソッドを呼び出す
+		Deck.shuffleDeck(deck); // メソッドを呼び出す
 
 		// シャッフルしたカードを表示。デバック用
 		//		for(Integer i : deck) {
@@ -77,11 +77,11 @@ public class MainGame {
 
 				//山札と手札を一枚進める
 				Deck.deckCount++;
-				Player.playerHands++;
+				Player.setPlayerHands(Player.getPlayerHands() + 1);
 
 				System.out.println("あなたの"
-						+ Player.playerHands + "枚目のカードは"
-						+ Deck.toDescription(player.get(Player.playerHands - 1)));
+						+ Player.getPlayerHands() + "枚目のカードは"
+						+ Deck.toDescription(player.get(Player.getPlayerHands() - 1)));
 				playerPoint = Deck.sumPoint(player);
 				System.out.println("現在の合計は" + playerPoint);
 				//プレイヤーのバーストチェック

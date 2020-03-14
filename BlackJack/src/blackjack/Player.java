@@ -2,7 +2,15 @@ package blackjack;
 
 public class Player extends Deck {
 
-	static int playerHands; //プレイヤーの手札枚数を記録する変数playerHandsを定義
+	private static int playerHands; //プレイヤーの手札枚数を記録する変数playerHandsを定義
+
+	public static int getPlayerHands() {
+		return playerHands;
+	}
+
+	public static void setPlayerHands(int playerHands) {
+		Player.playerHands = playerHands;
+	}
 
 
 }
