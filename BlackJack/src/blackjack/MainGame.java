@@ -96,6 +96,28 @@ public class MainGame {
 			}
 		}
 
+		//ディーラーが手札を17以上にするまでカードを引くフェーズ
+				while (true) {
+					//手札が１７以上の場合ブレーク
+					if (dealerPoint >= 17) {
+						break;
+					} else {
+						//手札に山札から1枚加える
+						dealer.add(deck.get(Deck.deckCount));
+						//山札を1枚進める
+						Deck.deckCount++;
+
+						//ディーラーの合計ポイントを計算
+						dealerPoint = Deck.sumPoint(dealer);
+						//ディーラーのバーストチェック
+						if (Deck.isBusted(dealerPoint)) {
+							System.out.println("ディーラーがバーストしました。あなたの勝ちです！");
+							return;
+
+						}
+					}
+				}
+
 	}
 
 }
