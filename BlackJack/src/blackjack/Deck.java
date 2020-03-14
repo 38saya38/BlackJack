@@ -32,7 +32,6 @@ public class Deck {
 		if (number == 0) {
 			number = 13;
 		}
-
 		return number;
 	}
 
