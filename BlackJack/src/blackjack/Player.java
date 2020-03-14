@@ -12,5 +12,9 @@ public class Player extends Deck {
 		Player.playerHands = playerHands;
 	}
 
+	public static void handsCount(){
+
+	}
+
 
 }

@@ -86,7 +86,7 @@ public class MainGame {
 				System.out.println("現在の合計は" + playerPoint);
 				//プレイヤーのバーストチェック
 				if (Deck.isBusted(playerPoint)) {
-					System.out.println("残念、バーストしてしまいました。");
+					System.out.println("残念、バーストしてしまいました。ディーラーの勝ちです。");
 					return;
 				}
 			} else {
