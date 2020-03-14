@@ -2,6 +2,7 @@ package blackjack;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 /*カード枚数は52枚。ジョーカーは含めない。カードの重複が無いように山札を構築する。
 プレイヤー、ディーラーの一対一で対戦するものとし、以下の挙動を取る
@@ -60,6 +61,40 @@ public class MainGame {
 
 		System.out.println("あなたの現在のポイントは"
 				+ playerPoint + "です");
+
+		//プレイヤーがカードを引くフェーズ
+		while (true) {
+			System.out.println("カードを引きますか？ Yes:y or No:n");
+			//キーボードの入力を受け付けて、変数strに代入する
+
+			Scanner scan = new Scanner(System.in);
+			String str = scan.next();
+
+			if ("n".equals(str)) {
+				break;
+			} else if ("y".equals(str)) {
+				//手札に山札から1枚加える
+				player.add(deck.get(deckCount));
+
+				//山札と手札を一枚進める
+				deckCount++;
+				playerHands++;
+
+				System.out.println("あなたの"
+						+ playerHands + "枚目のカードは"
+						+ toDescription(player.get(playerHands - 1)));
+				playerPoint = sumPoint(player);
+				System.out.println("現在の合計は" + playerPoint);
+				//プレイヤーのバーストチェック
+				if (isBusted(playerPoint)) {
+					System.out.println("残念、バーストしてしまいました。");
+					return;
+				}
+			} else {
+				System.out.println("あなたの入力は"
+						+ str + "です。y か n を入力してください。");
+			}
+		}
 
 	}
 
