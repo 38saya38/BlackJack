@@ -97,26 +97,38 @@ public class MainGame {
 		}
 
 		//ディーラーが手札を17以上にするまでカードを引くフェーズ
-				while (true) {
-					//手札が１７以上の場合ブレーク
-					if (dealerPoint >= 17) {
-						break;
-					} else {
-						//手札に山札から1枚加える
-						dealer.add(deck.get(Deck.deckCount));
-						//山札を1枚進める
-						Deck.deckCount++;
+		while (true) {
+			//手札が１７以上の場合ブレーク
+			if (dealerPoint >= 17) {
+				break;
+			} else {
+				//手札に山札から1枚加える
+				dealer.add(deck.get(Deck.deckCount));
+				//山札を1枚進める
+				Deck.deckCount++;
 
-						//ディーラーの合計ポイントを計算
-						dealerPoint = Deck.sumPoint(dealer);
-						//ディーラーのバーストチェック
-						if (Deck.isBusted(dealerPoint)) {
-							System.out.println("ディーラーがバーストしました。あなたの勝ちです！");
-							return;
+				//ディーラーの合計ポイントを計算
+				dealerPoint = Deck.sumPoint(dealer);
+				//ディーラーのバーストチェック
+				if (Deck.isBusted(dealerPoint)) {
+					System.out.println("ディーラーがバーストしました。あなたの勝ちです！");
+					return;
 
-						}
-					}
 				}
+			}
+		}
+
+		//ポイントを比較する
+		System.out.println("あなたのポイントは" + playerPoint);
+		System.out.println("ディーラーのポイントは" + dealerPoint);
+
+		if (playerPoint == dealerPoint) {
+			System.out.println("引き分けです。");
+		} else if (playerPoint > dealerPoint) {
+			System.out.println("勝ちました！");
+		} else {
+			System.out.println("負けました・・・");
+		}
 
 	}
 
