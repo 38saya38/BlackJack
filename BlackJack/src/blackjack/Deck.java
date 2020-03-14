@@ -8,7 +8,7 @@ public class Deck {
 	static int deckCount; //山札の進行状況を記録する変数deckCountを定義
 
 	// 山札（deck）に値を入れ、シャッフルするメソッド
-	public void shuffleDeck(List<Integer> deck) {
+	public static void shuffleDeck(List<Integer> deck) {
 		// リストに1-52の連番を代入
 		for (int i = 1; i <= 52; i++) {
 			deck.add(i);
