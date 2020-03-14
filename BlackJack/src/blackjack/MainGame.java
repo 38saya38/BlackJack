@@ -74,7 +74,7 @@ public class MainGame {
 				break;
 			} else if ("y".equals(str)) {
 				//手札に山札から1枚加える
-				player.add(deck.get(deckCount));
+				player.add(deck.get(Deck.deckCount));
 
 				//山札と手札を一枚進める
 				deckCount++;
