@@ -81,12 +81,12 @@ public class MainGame {
 				Player.playerHands++;
 
 				System.out.println("あなたの"
-						+ playerHands + "枚目のカードは"
-						+ toDescription(player.get(playerHands - 1)));
-				playerPoint = sumPoint(player);
+						+ Player.playerHands + "枚目のカードは"
+						+ Deck.toDescription(player.get(Player.playerHands - 1)));
+				playerPoint = Deck.sumPoint(player);
 				System.out.println("現在の合計は" + playerPoint);
 				//プレイヤーのバーストチェック
-				if (isBusted(playerPoint)) {
+				if (Deck.isBusted(playerPoint)) {
 					System.out.println("残念、バーストしてしまいました。");
 					return;
 				}
