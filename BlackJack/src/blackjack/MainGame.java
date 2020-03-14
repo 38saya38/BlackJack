@@ -78,7 +78,7 @@ public class MainGame {
 
 				//山札と手札を一枚進める
 				Deck.deckCount++;
-				playerHands++;
+				Player.playerHands++;
 
 				System.out.println("あなたの"
 						+ playerHands + "枚目のカードは"
