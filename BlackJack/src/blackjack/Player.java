@@ -10,6 +10,10 @@ public class Player extends Deck {
 
 	public static void setPlayerHands(int playerHands) {
 		Player.playerHands = playerHands;
+
+		for(int i = 0; i <5; i++) {
+
+		}
 	}
 
 }
