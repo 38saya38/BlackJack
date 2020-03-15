@@ -12,8 +12,4 @@ public class Player extends Deck {
 		Player.playerHands = playerHands;
 	}
 
-	public static int getPlayerHands(int i) {
-		return playerHands;
-	}
-
 }
