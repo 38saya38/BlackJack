@@ -13,6 +13,8 @@ public class Player extends Deck {
 	}
 
 	public static void handsCount(){
+		playerHands = 0;
+
 
 	}
 
