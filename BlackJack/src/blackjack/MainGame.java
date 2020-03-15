@@ -63,6 +63,9 @@ public class MainGame {
 		System.out.println("あなたの現在のポイントは"
 				+ playerPoint + "です");
 
+		Player.setPlayerHands(Player.getPlayerHands() + 1);
+
+
 		//プレイヤーがカードを引くフェーズ
 		while (true) {
 			System.out.println("カードを引きますか？ Yes:y or No:n");
@@ -79,7 +82,7 @@ public class MainGame {
 
 				//山札と手札を一枚進める
 				Deck.deckCount++;
-				Player.setPlayerHands(Player.getPlayerHands() + 1);
+				Player.getPlayerHands();
 
 				System.out.println("あなたの"
 						+ Player.getPlayerHands() + "枚目のカードは"
