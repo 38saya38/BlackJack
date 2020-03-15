@@ -46,11 +46,13 @@ public class MainGame {
 		dealer.add(deck.get(3));
 
 		//プレイヤー・ディーラーの手札のポイントを表示
-		System.out.println("貴方の1枚目のカードは"
+		System.out.println("貴方の"
+				+ Player.getPlayerHands() + "枚目のカードは"
 				+ Deck.toDescription(player.get(0)));
 		System.out.println("ディーラーの1枚目のカードは"
 				+ Deck.toDescription(dealer.get(0)));
-		System.out.println("貴方の2枚目のカードは"
+		System.out.println("貴方の"
+				+ Player.getPlayerHands() + "枚目のカードは"
 				+ Deck.toDescription(player.get(1)));
 		System.out.println("ディーラーの2枚めのカードは秘密だよ");
 
