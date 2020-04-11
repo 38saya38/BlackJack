@@ -18,9 +18,9 @@ public class MainGame {
 	    dealer.add(deck.pop());
 
 	    //プレイヤー・ディーラーの手札を表示
-	    System.out.println("貴方の1枚目のカードは" + player.get(0));
-	    System.out.println("ディーラーの1枚目のカードは" + dealer.get(0));
-	    System.out.println("貴方の2枚目のカードは" + player.get(1));
+	    System.out.println("貴方の1枚目のカードは" + player.get(0) + "です");
+	    System.out.println("ディーラーの1枚目のカードは" + dealer.get(0) + "です");
+	    System.out.println("貴方の2枚目のカードは" + player.get(1) + "です");
 	    System.out.println("ディーラーの2枚めのカードは秘密だよ");
 
 	    System.out.println("あなたの現在のポイントは" + player.sumPoint() + "です");

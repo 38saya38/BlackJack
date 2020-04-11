@@ -19,12 +19,13 @@ class Card {
     return Math.min(getRankIndex() + 1, 10);
   }
   /**
+   * 数を絵札か数札に変換するメソッド
    * @return 0-12
    */
   private int getRankIndex() {
     return (cardNumber - 1) % 13;
   }
-  /**
+  /**数をスートに変換するメソッド
    * @return 0-3
    */
   private int getSuitIndex() {
