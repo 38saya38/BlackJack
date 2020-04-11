@@ -21,7 +21,7 @@ public class MainGame {
 	    System.out.println("貴方の1枚目のカードは" + player.get(0) + "です");
 	    System.out.println("ディーラーの1枚目のカードは" + dealer.get(0) + "です");
 	    System.out.println("貴方の2枚目のカードは" + player.get(1) + "です");
-	    System.out.println("ディーラーの2枚めのカードは秘密だよ");
+	    System.out.println("ディーラーの2枚目のカードは秘密だよ");
 
 	    System.out.println("あなたの現在のポイントは" + player.sumPoint() + "です");
 
@@ -37,8 +37,8 @@ public class MainGame {
 	        } else if ("y".equals(str)) {
 	          //手札に山札から1枚加える
 	          int index = player.add(deck.pop());
-	          System.out.println("あなたの" + (index+1) + "枚目のカードは" + player.get(index));
-	          System.out.println("現在の合計は" + player.sumPoint());
+	          System.out.println("あなたの" + (index+1) + "枚目のカードは" + player.get(index) + "です");
+	          System.out.println("現在の合計は" + player.sumPoint() + "です");
 	          //プレイヤーのバーストチェック
 	          if (player.isBusted()) {
 	            System.out.println("残念、バーストしてしまいました。ディーラーの勝ちです。");
@@ -51,12 +51,12 @@ public class MainGame {
 	      }
 	    }
 
-	    System.out.println("ディーラーの2枚目のカードは" + dealer.get(1));
+	    System.out.println("ディーラーの2枚目のカードは" + dealer.get(1) + "です");
 	    //ディーラーが手札を17以上にするまでカードを引くフェーズ
 	    while (dealer.sumPoint() < 17) {
 	      //手札に山札から1枚加える
 	      int index = dealer.add(deck.pop());
-	      System.out.println("ディーラーの" + (index+1) + "枚目のカードは" + dealer.get(index));
+	      System.out.println("ディーラーの" + (index+1) + "枚目のカードは" + dealer.get(index) + "です");
 	      //ディーラーのバーストチェック
 	      if (dealer.isBusted()) {
 	        System.out.println("ディーラーがバーストしました。あなたの勝ちです！");
@@ -65,8 +65,8 @@ public class MainGame {
 	    }
 
 	    //ポイントを比較する
-	    System.out.println("あなたのポイントは" + player.sumPoint());
-	    System.out.println("ディーラーのポイントは" + dealer.sumPoint());
+	    System.out.println("あなたのポイントは" + player.sumPoint() + "です");
+	    System.out.println("ディーラーのポイントは" + dealer.sumPoint() + "です");
 
 	    if ( player.sumPoint() == dealer.sumPoint()) {
 	      System.out.println("引き分けです。");
